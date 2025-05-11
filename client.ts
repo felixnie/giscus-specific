@@ -64,7 +64,9 @@
       params.term = getMetaContent('title', true);
       break;
     case 'specific':
-      params.term = attributes.term as string;
+      // params.term = attributes.term as string;
+      // mod: use adaptive term
+      params.term = getMetaContent(attributes.term as string, true);
       break;
     case 'number':
       params.number = attributes.term as string;
